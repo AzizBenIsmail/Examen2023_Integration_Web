@@ -1,0 +1,159 @@
+Eléments imbriqués
+<p>Hello <strong> World </strong>!</p>
+
+Balise orpheline
+<img src="image.jpg" alt="logo">
+
+Les attributs
+<a href ="www.esprit.tn">Site Esprit</a>
+
+Les attributs
+<a href="www.esprit.tn">Site Esprit</a>
+<img src="assets/images/logo.jpg" alt="Logo Esprit" height="100" width="150">
+
+commentaire 
+<!-- Ceci est un commentaire -->
+
+Le document HTML
+<!DOCTYPE html>
+<html> 
+	<head> 
+		<title> … </title>
+	</head>
+<body> … </body>
+
+</html>
+
+Il y a 6 niveaux de titres: 
+<h1> - <h6>
+
+<p>…</p>
+
+Liste
+• Liste ordonnée <ol>…</ol>
+• Liste non-ordonnée <ul>…</ul>
+• Liste de description <dl>…</dl>
+
+Les éléments d’une liste 
+(non)-ordonnée est balisé 
+avec <li>
+
+Liste de description 
+<dl>
+	<dt>...</dt>
+	<dd>...</dd>
+	<dd>...</dd>
+</dl>
+
+Liste ordonnée(1.2.3)
+<ol>
+	<li>...</li>
+	<li>...</li>
+	<li>...</li>
+</ol>
+
+Liste non-ordonnée (• • • )
+<ul>
+	<li>...</li>
+	<li>...</li>
+	<li>...</li>
+</ul>
+
+Image
+<img src="assets/images/logo.jpg" alt="Logo Esprit"
+height="100" width="150">
+
+Lien
+<a href= "cible du lien" > texte </a>
+
+Mise en forme
+Mettre le texte en gras <b> … </b>
+– Mettre le texte en italique <i> … </i>
+– Mettre le texte en souligné. <u> … </u>
+– Ajouter un texte barré <s> … </s>
+– Mettre un texte en taille plus petite <small> … </small>
+<strong>, <mark>, <em>, <abbr>, <cite>, <q>, <code>
+
+• Sans signification sémantique: 
+ <div> … </div> 
+ <span> … </span> 
+• Avec signification sémantique: 
+ <header> … </header> 
+ <article> … </article> 
+ <nav> … </nav> 
+ <aside> … </aside> 
+ <footer> … </footer> 
+ <section> … </section>
+
+Tableau
+<table border = "1"> 
+	<caption>Titre du tableau</caption>
+	<tr> ligne 1 (Gras)
+		<th>col1</th>
+		<th>col2</th>
+	</tr>
+	<tr> ligne 2
+		<td>col1</td>
+		<td>col2</td>
+	</tr>
+	<tr> ligne 3
+		<td>col1</td>
+		<td>col2</td>
+	</tr>
+</table>
+
+Fusion horizontale – Fusion de colonnes
+<td colspan = "2"
+
+Fusion vertical – Fusion des lignes
+<td rowspan = "2">
+
+Formulaire
+<form> 
+	<label> Texte à afficher </label>
+	<input type="" id="" name="" required minlength="3" maxlength="20" size="10">
+	<select name="pays"> 
+		<option value="tn">tunisie</option>
+		<option value="fr">france</option>
+		<option value="ca">canada</option>
+	</select>
+</form>
+
+type : 
+– button
+– checkbox
+– color
+– date
+- time
+– datetime-local
+– email
+– file
+– hidden
+– image
+
+<textarea> </textarea>
+
+Les attributs: 
+– autocomplete
+– autofocus
+– checked, selected
+– disabled, readonly
+– max, min, step
+– maxlength, minlength
+
+disabled / readonly
+checked / selected
+
+<label> 
+	<input type="radio" id="" name="" required minlength="3" maxlength="20" size="10" checked>
+</label>
+<label>
+	<input type="checkbox" id="" name="" required minlength="3" maxlength="20" size="10" checked> 
+</label>
+	
+Max / Min / Step
+
+placeholder="contact@gmail.com"
+
+
+<input type="email" pattern=".+@gamil.com" title="saisire une addresse @gmail">

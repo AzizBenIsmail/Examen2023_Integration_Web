@@ -1,0 +1,13 @@
+
+//how to add font-face in scss
+
+@font-face{
+    font-family: 'test';
+    src: url("/Fonts/Lato/Lato-ThinItalic.ttf") format('truetype');
+}
+
+h1{ 
+    font-family:'test';
+}
+
+/////////////

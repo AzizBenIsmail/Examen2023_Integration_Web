@@ -1,0 +1,359 @@
+***Les Variables SASS
+
+/* define primary colors */
+$myFont: Helvetica, sans-serif;
+$myColor: red;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+
+/* use the variables */
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+}
+
+**Nesting
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+**Mixins
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.danger {
+  @include important-text;
+  background-color: green;
+}
+
+/* Define mixin with two arguments */
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+.myArticle {
+  @include bordered(blue, 1px);  // Call mixin with two values
+}
+
+.myNotes {
+  @include bordered(red, 2px); // Call mixin with two values
+}
+
+** Héritage
+
+.button-basic  {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report  {
+  @extend .button-basic;
+  background-color: red;
+}
+
+.button-submit  {
+  @extend .button-basic;
+  background-color: green;
+  color: white;
+}
+
+Les fonctions
+-----String Functions-------
+quote(Hello world!)
+Result: "Hello world!"
+
+str-index("Hello world!", "H")
+Result: 1
+
+str-insert("Hello world!", " wonderful", 6)
+Result: "Hello wonderful world!"
+
+str-length("Hello world!")
+Result: 12
+
+str-slice("Hello world!", 2, 5)
+Result: "ello"
+
+to-lower-case("Hello World!")
+Result: "hello world!"
+
+to-upper-case("Hello World!")
+Result: "HELLO WORLD!"
+
+unique-id()
+Result: tyghefnsv
+
+unquote("Hello world!")
+Result: Hello world!
+
+-----Numeric Functions------
+
+abs(15)
+Result: 15
+abs(-15)
+Result: 15
+
+ceil(15.20)
+Result: 16
+
+comparable(15px, 10px)
+Result: true
+comparable(20mm, 1cm)
+Result: true
+comparable(35px, 2em)
+Result: false
+
+floor(15.80)
+Result: 15
+
+max(5, 7, 9, 0, -3, -7)
+Result: 9
+
+min(5, 7, 9, 0, -3, -7)
+Result: -7
+
+percentage(1.2)
+Result: 120
+
+random()
+Result: 0.45673
+
+random(6)
+Result: 4
+
+round(15.20)
+Result: 15
+round(15.80)
+Result: 16
+
+-----List Functions------
+
+append((a b c), d)
+Result: a b c d
+append((a b c), (d), comma)
+Result: a, b, c, d
+
+index(a b c, b)
+Result: 2
+index(a b c, f)
+Result: null
+
+is-bracketed([a b c])
+Result: true
+is-bracketed(a b c)
+Result: false
+
+join(a b c, d e f)
+Result: a b c d e f
+join((a b c), (d e f), comma)
+Result: a, b, c, d, e, f
+join(a b c, d e f, $bracketed: true)
+Result: [a b c d e f]
+
+length(a b c)
+Result: 3
+
+list-separator(a b c)
+Result: "space"
+list-separator(a, b, c)
+Result: "comma"
+
+nth(a b c, 3)
+Result: c
+
+set-nth(a b c, 2, x)
+Result: a x c
+
+zip(1px 2px 3px, solid dashed dotted, red green blue)
+Result: 1px solid red, 2px dashed green, 3px dotted blue
+
+-------Map Functions-------
+
+$font-sizes: ("small": 12px, "normal": 18px, "large": 24px)
+map-get($font-sizes, "small")
+Result: 12px
+
+$font-sizes: ("small": 12px, "normal": 18px, "large": 24px)
+map-has-key($font-sizes, "big")
+Result: false
+
+$font-sizes: ("small": 12px, "normal": 18px, "large": 24px)
+map-keys($font-sizes)
+Result: "small", "normal, "large"
+
+$font-sizes: ("small": 12px, "normal": 18px, "large": 24px)
+$font-sizes2: ("x-large": 30px, "xx-large": 36px)
+map-merge($font-sizes, $font-sizes2)
+Result: "small": 12px, "normal": 18px, "large": 24px, "x-large": 30px, "xx-large": 36px
+
+$font-sizes: ("small": 12px, "normal": 18px, "large": 24px)
+map-remove($font-sizes, "small")
+Result: ("normal": 18px, "large": 24px)
+map-remove($font-sizes, "small", "large")
+Result: ("normal": 18px)
+
+$font-sizes: ("small": 12px, "normal": 18px, "large": 24px)
+map-values($font-sizes)
+Result: 12px, 18px, 24px
+
+----Selector Functions-----
+
+is-superselector("div", "div.myInput")
+Result: true
+is-superselector("div.myInput", "div")
+Result: false
+is-superselector("div", "div")
+Result: true
+
+selector-append("div", ".myInput")
+Result: div.myInput
+selector-append(".warning", "__a")
+Result: .warning__a
+
+selector-nest("ul", "li")
+Result: ul li
+selector-nest(".warning", "alert", "div")
+Result: .warning div, alert div
+
+selector-parse("h1 .myInput .warning")
+Result: ('h1' '.myInput' '.warning')
+
+selector-replace("p.warning", "p", "div")
+Result: div.warning
+
+selector-unify("myInput", ".disabled")
+Result: myInput.disabled
+selector-unify("p", "h1")
+Result: null
+
+simple-selectors("div.myInput")
+Result: div, .myInput
+simple-selectors("div.myInput:before")
+Result: div, .myInput, :before
+
+----Introspection Functions------
+
+feature-exists("at-error");
+Result: true
+
+function-exists("nonsense")
+Result: false
+
+variable-exists(a)
+Result: true
+
+mixin-exists("important-text")
+Result: true
+
+type-of(15px)
+Result: number
+type-of(#ff0000)
+Result: color
+
+unit(15px)
+Result: px
+
+unitless(15px)
+Result: false
+unitless(15)
+Result: true
+
+variable-exists(b)
+Result: true
+
+----Color Functions-----
+
+rgb(0, 0, 255); // rendered as blue because the blue parameter is set to its highest value (255) and the others are set to 0
+
+rgba(0, 0, 255, 0.3); // rendered as blue with opacity
+
+hsl(120, 100%, 50%); // green
+hsl(120, 100%, 75%); // light green
+hsl(120, 100%, 25%); // dark green
+hsl(120, 60%, 70%); // pastel green
+
+hsl(120, 100%, 50%, 0.3); // green with opacity
+hsl(120, 100%, 75%, 0.3); // light green with opacity
+
+grayscale(#7fffd4);
+Result: #c6c6c6
+
+complement(#7fffd4);
+Result: #ff7faa
+
+invert(white);
+Result: black
+
+------Get Color Functions-----
+
+red(#7fffd4);
+Result: 127
+red(red);
+Result: 255
+
+green(#7fffd4);
+Result: 255
+green(blue);
+Result: 0
+
+blue(#7fffd4);
+Result: 212
+blue(blue);
+Result: 255
+
+hue(#7fffd4);
+Result: 160deg
+
+saturation(#7fffd4);
+Result: 100%
+
+lightness(#7fffd4);
+Result: 74.9%
+
+alpha(#7fffd4);
+Result: 1
+
+opacity(rgba(127, 255, 212, 0.5));
+Result: 0.5
+
+-----Manipulate Color Functions------
+
+mix(color1, color2, weight)
+
+adjust-hue(#7fffd4, 80deg);
+Result: #8080ff
+
+adjust-color(#7fffd4, blue: 25);
+Result:
+
+change-color(#7fffd4, red: 255);
+Result: #ffffd4
+
+rgba(#7fffd4, 30%);
+Result: rgba(127, 255, 212, 0.3)

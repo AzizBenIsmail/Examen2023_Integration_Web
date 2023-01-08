@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "WorkSans SemiBold";
+    src: url("../Fonts/WorkSans-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: WorkSans-Regular;
+    src: url("../Fonts/WorkSans-Regular.ttf");
+}
+
+$primaryFont: "WorkSans SemiBold", sans-serif;
+$secondaryFont: WorkSans-Regular, sans-serif;
+
+
+$navbarColor: #ffffff;
+$navLinkColor: #314584;
+
+
+$titleColor: #314584;
+$subTitleColor: #6e757a;
+$colorGray: #848484;
+$workColor: #4f4f4f;
+$descriptionColor: #a8a8a8;
+$whiteColor: #ffffff;
+$blackColor: #000000;
+$paragColor: #4e4e4e;
+$footerColor: #314584;
+$footerColorcara: #ff3946;

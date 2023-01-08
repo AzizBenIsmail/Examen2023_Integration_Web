@@ -1,0 +1,137 @@
+Syntaxe
+
+selector 
+{ property1: value1; 
+property2: value2; ... 
+propertyN: valueN; } 
+
+Exemple :     
+
+ h1{ font-family: Arial; 
+       font-style: italic }
+
+Declaration :
+
+<link rel="stylesheet" type= "text/css" href= « style.css"> 
+
+h1 {font-size : 16px; font-family : Verdana;
+font-style: italic;
+color : black; }
+
+/*commentaire*/
+
+Mise en forme d’un texte en CSS
+	Color
+	letter-spacing
+	text-align (left ou center ou right)
+	text-decoration (soit barré, clignotant, blink ,underline ,line-through ,overline ,none)
+	text-indent
+	text-transform (uppercase,lowercase,capitalize)
+	white-space (espace ou blanc normal ou pre ou nowrap PRE)
+	word-spacing
+	letter-spacing  (définit l'espace entre les lettres spécifié )
+	line-height (interligne soit l'espace entre les lignes)
+
+Gestion des différentes polices
+	font-family (Arial, Times, Helvetica...)
+	font-size  (taille)
+	font-style (normal ou italique ou oblique)
+	font-variant (normale normal ou small-caps)
+	font-weight (normal ou bold ou bolder ou lighter)
+
+Les bordures en CSS
+	border-color (code color: #00000)
+	border-style (none,dotted,dashed,solid,double,groove,ridge,inset,outset)
+	border-width (medium, thin, thick ou une dimension)
+
+width:  (la longueur d'un élément de texte ou d'une image)
+heigh: (la hauteur d'un élément de texte ou d'une image)
+
+Exemple : 
+h3 {font-family: Arial;
+    font-style: italic; 
+    color: #000080;
+   } 
+p {font-weight: bold;
+   font-size: 12pt;
+   font-variant: small-caps;
+   text-indent: 1cm ; 
+   text-transform: uppercase;
+   word-spacing: 5pt;
+   line-height: 10pt;
+} 
+
+H1 {text-align: center;
+   width: 200px;
+   heigh: 100px;
+   white-space: pre;
+}
+
+A:visited {text-decoration: blink }
+
+**Color 
+#00FF45 
+rgb(0,0,100)
+
+Liste des couleurs standard :
+navy,olive,purple,red,silver,teal,white,yellow 
+aqua,black,blue,fuchsia,gray,green,lime,maroon
+
+**background-color
+body 
+{
+ background-color : rgb(0,0,0) ;
+ color : white
+}
+
+*Boîtes et positionnement
+Float : none, left ou right
+overflow : visible, hidden, scroll ou auto
+visibility :visible ou hidden
+clear : none, left, right ou both
+width : Permet de spécifier la largeur d’un bloc
+height : Permet de spécifier la hauteur d’un bloc
+Position : (Absolute ,Relative , Fixed )
+
+*Les Marges
+
+Exemples :
+h1 { margin: 20px 10px 15px 10px; } (haut, droit, bas, gauche)
+p { margin: 10%; }
+b { margin-left: 3em; }
+.block_centre { margin: auto; width:200px; }
+
+*Les Paddings
+Exemples: 
+h1 { padding: 20px 10px; } (haut, droit, bas et gauche de l‘élément)
+h1 { padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 10px;
+padding-left: 10px;
+
+*La création de menu horizontal
+HTML 
+<ul> 
+<li><a href="p1.html">lien1</a> </li>
+<li><a href="p2.html">lien2</a></li>
+<li><a href="p3.html">lien3</a></li>
+</ul>
+
+css
+ul li{ 
+list-style: none; 
+float: left; 
+padding:5px; }
+
+ul li a{ 
+text-decoration: none;
+color: red;
+background-color: blue; }
+
+ul li a:hover{
+ color: green;
+font-weight: bold;
+background-color: orange; }
+
+
+

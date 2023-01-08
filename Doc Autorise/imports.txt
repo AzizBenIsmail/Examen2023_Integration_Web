@@ -1,0 +1,5 @@
+sass SCSS/styles.scss css/style.css --watch
+
+@import "variables";
+@import "mixins";
+@import "functions";

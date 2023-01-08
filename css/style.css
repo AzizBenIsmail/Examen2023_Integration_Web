@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "WorkSans SemiBold";
+  src: url("../Fonts/WorkSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: WorkSans-Regular;
+  src: url("../Fonts/WorkSans-Regular.ttf");
+}
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #ffffff;
+}
+
+.navbar-nav {
+  padding-left: 10.375rem;
+}
+@media screen and (max-width: 1200px) {
+  .navbar-nav {
+    padding-left: 16.3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    padding-left: 13.24375rem;
+  }
+}
+
+.nav-item {
+  padding-right: 210.93px;
+}
+@media screen and (max-width: 992px) {
+  .nav-item {
+    padding-right: 3.8545rem;
+  }
+}
+
+.nav-logo {
+  padding-right: 16.93px;
+}
+@media screen and (max-width: 992px) {
+  .nav-logo {
+    padding-right: 3.8545rem;
+  }
+}
+
+.last {
+  padding-right: 0;
+}
+
+.nav-link {
+  color: #314584;
+  font-size: 24.76px;
+  font-family: "WorkSans SemiBold", sans-serif;
+}
+@media screen and (max-width: 1200px) {
+  .nav-link {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .nav-link {
+    font-size: 1.21875rem;
+  }
+}
+
+.title, .title3, .title2, .title1 {
+  font-size: 74pt;
+}
+@media screen and (max-width: 992px) {
+  .title, .title3, .title2, .title1 {
+    font-size: 1.43rem;
+  }
+}
+
+.title1 {
+  font-size: 74pt;
+  color: #314584;
+  padding-top: 5.43rem;
+  font-family: "WorkSans SemiBold", sans-serif;
+}
+
+.title2 {
+  font-size: 74pt;
+  color: #314584;
+  padding-top: 5.43rem;
+  font-family: "WorkSans SemiBold", sans-serif;
+}
+
+.title3 {
+  font-size: 18pt;
+  color: #6e757a;
+}
+
+p {
+  font-family: "WorkSans SemiBold", sans-serif;
+  font-size: 1.5rem;
+  color: #4e4e4e;
+}
+@media screen and (max-width: 992px) {
+  p {
+    font-size: 0.975rem;
+  }
+}
+
+h2 {
+  font-family: "WorkSans SemiBold", sans-serif;
+  font-size: 1.5rem;
+  color: #4e4e4e;
+}
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 0.975rem;
+  }
+}
+
+#section3 {
+  position: relative;
+}
+
+.box_text {
+  position: absolute;
+  top: 1.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box_text h1 {
+  border: 0.1875rem solid #fff;
+  padding: 1rem;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #314584;
+  height: 7.68rem;
+}
+
+footer p {
+  color: #ff3946;
+  font-size: 49px;
+  font-family: "WorkSans SemiBold", sans-serif;
+  margin: 0;
+}
+@media screen and (max-width: 992px) {
+  footer p {
+    font-size: 0.73125rem;
+  }
+}
+
+footer h1 {
+  color: #ffffff;
+  font-size: 18px;
+  font-family: WorkSans-Regular, sans-serif;
+  margin: 0;
+}
+@media screen and (max-width: 992px) {
+  footer h1 {
+    font-size: 0.73125rem;
+  }
+}
+
+.footer_social i {
+  color: #848484;
+  padding-left: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .footer_social i {
+    padding-left: 0.5rem;
+  }
+}
+
+.footer_social {
+  color: #ffffff;
+}
+
+.heading-2 {
+  font-family: WorkSans-Regular, sans-serif;
+  font-size: 2.2rem;
+  color: #6e757a;
+}
+@media screen and (max-width: 992px) {
+  .heading-2 {
+    font-size: 1.43rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .heading-2 {
+    font-size: 1.21rem;
+  }
+}
+
+.heading, .heading-4, .heading-3 {
+  font-family: "WorkSans SemiBold", sans-serif;
+}
+
+.heading-3 {
+  font-size: 1.875rem;
+  color: #4f4f4f;
+  font-weight: bold;
+}
+@media screen and (max-width: 992px) {
+  .heading-3 {
+    font-size: 1.21875rem;
+  }
+}
+
+.heading-4 {
+  color: #848484;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 992px) {
+  .heading-4 {
+    font-size: 0.73125rem;
+  }
+}
+
+#timeLine i {
+  color: #4f4f4f;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 992px) {
+  #timeLine i {
+    font-size: 1.625rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
